@@ -12,15 +12,7 @@ class AuthPage extends StatefulWidget {
   _AuthPageState createState() => _AuthPageState();
 }
 
-class _AuthPageState extends State<AuthPage> {
-  final AuthController store = Modular.get();
-
-  @override
-  void dispose() {
-    store.dispose();
-    super.dispose();
-  }
-
+class _AuthPageState extends ModularState<AuthPage, AuthController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
