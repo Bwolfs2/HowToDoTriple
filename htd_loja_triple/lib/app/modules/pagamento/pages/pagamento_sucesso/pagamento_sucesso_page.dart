@@ -24,7 +24,7 @@ class _PagamentoSucessoPageState
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            "Pagamento Finalizado com sucesso ${controller.model.nome}!!!",
+            "Pagamento Finalizado com sucesso ${store.model.nome}!!!",
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 30),
           ),

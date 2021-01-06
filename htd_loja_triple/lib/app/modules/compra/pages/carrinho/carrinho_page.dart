@@ -3,7 +3,6 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../../../modules/compra/pages/carrinho/widgets/carrinho_lista_produtos/carrinho_lista_produtos_widget.dart';
 import '../../../../modules/compra/pages/carrinho/widgets/carrinho_total/carrinho_total_widget.dart';
-import 'carrinho_controller.dart';
 
 class CarrinhoPage extends StatefulWidget {
   final String title;
@@ -13,8 +12,7 @@ class CarrinhoPage extends StatefulWidget {
   _CarrinhoPageState createState() => _CarrinhoPageState();
 }
 
-class _CarrinhoPageState
-    extends ModularState<CarrinhoPage, CarrinhoController> {
+class _CarrinhoPageState extends State<CarrinhoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

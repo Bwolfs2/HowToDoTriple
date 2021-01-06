@@ -8,6 +8,7 @@ class AuthModule extends ChildModule {
   final List<Bind> binds = [
     Bind(
       (i) => AuthController(i.get<AuthStore>()),
+      isSingleton: false,
     ),
   ];
 

@@ -11,8 +11,15 @@ class DadosPagamentoPage extends StatefulWidget {
   _DadosPagamentoPageState createState() => _DadosPagamentoPageState();
 }
 
-class _DadosPagamentoPageState
-    extends ModularState<DadosPagamentoPage, DadosPagamentoController> {
+class _DadosPagamentoPageState extends State<DadosPagamentoPage> {
+  final DadosPagamentoController store = Modular.get();
+
+  @override
+  void dispose() {
+    store.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

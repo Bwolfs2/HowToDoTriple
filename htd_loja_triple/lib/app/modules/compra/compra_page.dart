@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import '../../modules/produto/models/produto_model.dart';
 
-import 'compra_controller.dart';
-
 class CompraPage extends StatefulWidget {
   final ProdutoModel produtoModel;
   final String title;
@@ -17,7 +15,7 @@ class CompraPage extends StatefulWidget {
   _CompraPageState createState() => _CompraPageState();
 }
 
-class _CompraPageState extends ModularState<CompraPage, CompraController> {
+class _CompraPageState extends State<CompraPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

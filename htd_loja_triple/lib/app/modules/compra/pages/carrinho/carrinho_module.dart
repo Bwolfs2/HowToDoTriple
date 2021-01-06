@@ -2,7 +2,6 @@ import '../../../../modules/compra/pages/carrinho/widgets/carrinho_lista_produto
 import '../../../../modules/compra/pages/carrinho/widgets/carrinho_total/carrinho_total_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import 'carrinho_controller.dart';
 import 'carrinho_page.dart';
 
 class CarrinhoModule extends ChildModule {
@@ -10,7 +9,6 @@ class CarrinhoModule extends ChildModule {
   final List<Bind> binds = [
     Bind((i) => CarrinhoListaProdutosController()),
     Bind((i) => CarrinhoTotalController()),
-    Bind((i) => CarrinhoController()),
   ];
 
   @override

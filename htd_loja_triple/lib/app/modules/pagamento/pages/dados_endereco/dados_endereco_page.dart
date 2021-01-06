@@ -12,8 +12,15 @@ class DadosEnderecoPage extends StatefulWidget {
   _DadosEnderecoPageState createState() => _DadosEnderecoPageState();
 }
 
-class _DadosEnderecoPageState
-    extends ModularState<DadosEnderecoPage, DadosEnderecoController> {
+class _DadosEnderecoPageState extends State<DadosEnderecoPage> {
+  final DadosEnderecoController store = Modular.get();
+
+  @override
+  void dispose() {
+    store.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,11 +37,11 @@ class _DadosEnderecoPageState
               mainAxisSize: MainAxisSize.min,
               children: [
                 TextFormField(
-                  controller: controller.ruaController,
+                  controller: store.ruaController,
                   decoration: InputDecoration(labelText: "Rua"),
                 ),
                 TextFormField(
-                  controller: controller.numeroController,
+                  controller: store.numeroController,
                   decoration: InputDecoration(labelText: "Numero"),
                 ),
               ],
@@ -46,7 +53,7 @@ class _DadosEnderecoPageState
             child: RaisedButton(
                 color: Theme.of(context).primaryColor,
                 child: Text("Continuar"),
-                onPressed: controller.proximo),
+                onPressed: store.proximo),
           ),
         ],
       ),
