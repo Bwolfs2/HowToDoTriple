@@ -8,14 +8,14 @@ import 'modules/compra/compra_module.dart';
 import 'modules/loja/loja_module.dart';
 import 'modules/pagamento/pagamento_module.dart';
 import 'modules/produto/produto_module.dart';
-import 'shared/stores/auth/auth_store.dart';
+import 'shared/stores/auth/auth_view_model.dart';
 
 class AppModule extends MainModule {
   @override
-  List<Bind> get binds => [
-        Bind((i) => AppController()),
-        Bind((i) => AuthStore()),
-      ];
+  final List<Bind> binds = [
+    Bind((i) => AppController()),
+    Bind((i) => AuthViewModel()),
+  ];
 
   @override
   final List<ModularRoute> routes = [

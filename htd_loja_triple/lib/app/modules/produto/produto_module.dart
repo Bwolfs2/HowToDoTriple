@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import '../../shared/stores/auth/auth_store.dart';
+import '../../shared/stores/auth/auth_view_model.dart';
 
 import 'produto_store.dart';
 import 'produto_page.dart';
@@ -12,7 +12,7 @@ class ProdutoModule extends ChildModule {
     Bind((i) => ProdutoStore(
           i.get<ProdutoRepository>(),
           i.args?.params?["idLoja"],
-          i.get<AuthStore>(),
+          i.get<AuthViewModel>(),
         )),
   ];
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:htd_loja_triple/app/shared/stores/auth/auth_store.dart';
+import 'package:htd_loja_triple/app/shared/stores/auth/auth_view_model.dart';
 //import 'package:google_fonts/google_fonts.dart';
 import 'auth_controller.dart';
 

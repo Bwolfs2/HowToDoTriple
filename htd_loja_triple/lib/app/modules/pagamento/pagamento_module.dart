@@ -1,6 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
 
-import '../../shared/stores/auth/auth_store.dart';
+import '../../shared/stores/auth/auth_view_model.dart';
 
 import 'pagamento_page.dart';
 import 'pages/dados_endereco/dados_endereco_controller.dart';
@@ -13,13 +13,13 @@ import 'stores/pagamento_store.dart';
 
 class PagamentoModule extends ChildModule {
   @override
-  List<Bind> get binds => [
-        Bind((i) => PagamentoSucessoController(i.get<PagamentoStore>())),
-        Bind((i) => DadosPagamentoController(i.get<PagamentoStore>())),
-        Bind((i) => DadosEnderecoController(i.get<PagamentoStore>())),
-        //stores
-        Bind((i) => PagamentoStore(i.get<AuthStore>())),
-      ];
+  final List<Bind> binds = [
+    Bind((i) => PagamentoSucessoController(i.get<PagamentoStore>())),
+    Bind((i) => DadosPagamentoController(i.get<PagamentoStore>())),
+    Bind((i) => DadosEnderecoController(i.get<PagamentoStore>())),
+    //stores
+    Bind((i) => PagamentoStore(i.get<AuthViewModel>())),
+  ];
 
   @override
   final List<ModularRoute> routes = [

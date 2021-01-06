@@ -1,13 +1,13 @@
 import '../../modules/auth/auth_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import '../../modules/auth/auth_page.dart';
-import '../../shared/stores/auth/auth_store.dart';
+import '../../shared/stores/auth/auth_view_model.dart';
 
 class AuthModule extends ChildModule {
   @override
   final List<Bind> binds = [
     Bind(
-      (i) => AuthController(i.get<AuthStore>()),
+      (i) => AuthController(i.get<AuthViewModel>()),
       isSingleton: false,
     ),
   ];

@@ -1,11 +1,11 @@
 import 'package:flutter_triple/flutter_triple.dart';
 
-import '../../shared/stores/auth/auth_store.dart';
+import '../../shared/stores/auth/auth_view_model.dart';
 import 'models/produto_model.dart';
 import 'repositories/produto_repository.dart';
 
 class ProdutoStore extends NotifierStore<Object, List<ProdutoModel>> {
-  final AuthStore _authStore;
+  final AuthViewModel _authStore;
 
   final ProdutoRepository repository;
   ProdutoStore(this.repository, String idLoja, this._authStore) : super([]) {

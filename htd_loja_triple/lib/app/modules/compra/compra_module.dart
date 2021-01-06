@@ -5,15 +5,15 @@ import 'pages/carrinho/carrinho_module.dart';
 
 class CompraModule extends ChildModule {
   @override
-  List<Bind> get binds => [];
+  final List<Bind> binds = [];
 
   @override
-  List<ModularRoute> get routes => [
-        ChildRoute(Modular.initialRoute,
-            child: (_, args) => CompraPage(
-                  produtoModel: args?.data,
-                )),
-        ModuleRoute("/carrinho",
-            module: CarrinhoModule(), transition: TransitionType.fadeIn),
-      ];
+  final List<ModularRoute> routes = [
+    ChildRoute(Modular.initialRoute,
+        child: (_, args) => CompraPage(
+              produtoModel: args?.data,
+            )),
+    ModuleRoute("/carrinho",
+        module: CarrinhoModule(), transition: TransitionType.fadeIn),
+  ];
 }

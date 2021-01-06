@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import '../../shared/stores/auth/auth_store.dart';
+import '../../shared/stores/auth/auth_view_model.dart';
 
 import 'loja_store.dart';
 import 'loja_page.dart';
@@ -12,7 +12,7 @@ class LojaModule extends ChildModule {
     Bind(
       (i) => LojaStore(
         i.get<LojaRepository>(),
-        i.get<AuthStore>(),
+        i.get<AuthViewModel>(),
       ),
     ),
   ];

@@ -2,12 +2,13 @@ import 'package:asuka/asuka.dart' as asuka;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_triple/flutter_triple.dart';
 
 import '../../shared/models/usuario/usuario_model.dart';
-import '../../shared/stores/auth/auth_store.dart';
+import '../../shared/stores/auth/auth_view_model.dart';
 
 class AuthController extends Disposable {
-  final AuthStore? _authStore;
+  final AuthViewModel? _authStore;
   AuthController(this._authStore);
 
   var emailController = TextEditingController();
