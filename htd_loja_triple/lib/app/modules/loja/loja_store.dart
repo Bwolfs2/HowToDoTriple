@@ -19,7 +19,7 @@ class LojaStore extends NotifierStore<Object, List<LojaModel>> {
     setLoading(true);
 
     await repository.obterLojas().catchError(setError).then(update);
-
+    setError("Deu MErda");
     setLoading(false);
   }
 }
