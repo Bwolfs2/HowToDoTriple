@@ -59,12 +59,18 @@ class _LojaPageState extends ModularState<LojaPage, LojaStore> {
             ),
           ),
           Expanded(
-            child: CustomThing(
+            child: ScopedBuilder(
                 store: store,
+                onLoading: (context) => Center(
+                      child: CircularProgressIndicator(),
+                    ),
+                onError: (context, error) => Center(
+                      child: Text('Some Error happends'),
+                    ),
                 onState: (context, List<LojaModel> state) {
                   if (store.state.length == 0) {
                     return Center(
-                      child: Text("Nenhum dado encontrado!!"),
+                      child: Text("No Stores Found!!"),
                     );
                   }
 

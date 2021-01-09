@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/example/htd_route_outlets/BuildConfig.java
+ com.example.htd_route_outlets.BuildConfig

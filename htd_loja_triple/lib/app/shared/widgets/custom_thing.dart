@@ -10,9 +10,11 @@ class CustomThing<TStore extends Store<TError, TState>, TError extends Object,
       Widget Function(BuildContext context, TError? error)? onError,
       required TStore store})
       : super(key: key, onState: onState, onError: onError, store: store) {
-    store.observer(onError: (error) {
-      asuka.showSnackBar(SnackBar(content: Text(error.toString())));
-    });
+    store.observer(
+      onError: (error) {
+        asuka.showSnackBar(SnackBar(content: Text(error.toString())));
+      },
+    );
   }
 
   @override
