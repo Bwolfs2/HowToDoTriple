@@ -5,7 +5,7 @@ import '../../shared/stores/auth/auth_view_model.dart';
 import 'models/loja_model.dart';
 import 'repositories/loja_repository.dart';
 
-class LojaStore extends NotifierStore<Object, List<LojaModel>> {
+class LojaStore extends NotifierStore<Exception, List<LojaModel>> {
   final AuthViewModel _authStore;
   final LojaRepository repository;
 
@@ -16,10 +16,15 @@ class LojaStore extends NotifierStore<Object, List<LojaModel>> {
   bool get isLogged => _authStore.isLogged;
 
   Future init() async {
-    setLoading(true);
+    execute(repository.obterLojas);
+    execute(repository.obterLojas);
+    execute(repository.obterLojas);
+    execute(repository.obterLojas);
+    execute(repository.obterLojas);
+    // setLoading(true);
 
-    await repository.obterLojas().catchError(setError).then(update);
+    // await repository.obterLojas().then(update).catchError(setError);
 
-    setLoading(false);
+    // setLoading(false);
   }
 }

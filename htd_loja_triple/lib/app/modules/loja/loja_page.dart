@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_triple/flutter_triple.dart';
+import 'package:htd_loja_triple/app/shared/widgets/custom_thing.dart';
 //import 'package:google_fonts/google_fonts.dart';
 import 'loja_store.dart';
 import 'models/loja_model.dart';
@@ -63,10 +64,13 @@ class _LojaPageState extends ModularState<LojaPage, LojaStore> {
                 onLoading: (context) => Center(
                       child: CircularProgressIndicator(),
                     ),
-                onState: (_, List<LojaModel> state) {
+                onError: (context, error) => Center(
+                      child: Text('Some Error happends'),
+                    ),
+                onState: (context, List<LojaModel> state) {
                   if (store.state.length == 0) {
                     return Center(
-                      child: Text("Nenhum dado encontrado!!"),
+                      child: Text("No Stores Found!!"),
                     );
                   }
 

@@ -4,6 +4,8 @@ import '../../../modules/loja/models/loja_model.dart';
 class LojaRepository extends Disposable {
   Future<List<LojaModel>> obterLojas() async {
     await Future.delayed(Duration(seconds: 1));
+    //throw Exception("Error");
+    print('Chamou');
     return _data;
   }
 

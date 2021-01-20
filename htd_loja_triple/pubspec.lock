@@ -113,6 +113,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.2"
+  dartz:
+    dependency: transitive
+    description:
+      name: dartz
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.10.0-nullsafety.0"
   fake_async:
     dependency: transitive
     description:
@@ -162,19 +169,12 @@ packages:
       name: flutter_triple
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.21"
+    version: "0.0.25"
   fuchsia_remote_debug_protocol:
     dependency: transitive
     description: flutter
     source: sdk
     version: "0.0.0"
-  functional_listener:
-    dependency: "direct main"
-    description:
-      name: functional_listener
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.1"
   glob:
     dependency: transitive
     description:
@@ -380,7 +380,7 @@ packages:
       name: triple
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.19"
+    version: "0.0.23"
   typed_data:
     dependency: transitive
     description:
@@ -432,4 +432,3 @@ packages:
     version: "2.2.1"
 sdks:
   dart: ">=2.12.0-0.0 <3.0.0"
-  flutter: ">=1.17.0 <2.0.0"
