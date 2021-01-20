@@ -1,6 +1,0 @@
-dev/flutter/integration_test/BuildConfig.java
- dev.flutter.integration_test.BuildConfig
-dev/flutter/plugins/integration_test/IntegrationTestPlugin.java
- dev.flutter.plugins.integration_test.IntegrationTestPlugin
-dev/flutter/plugins/integration_test/FlutterTestRunner.java
- dev.flutter.plugins.integration_test.FlutterTestRunner

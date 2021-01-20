@@ -1,4 +1,0 @@
-#Thu Jan 07 13:36:07 BRT 2021
-base.0=D\:\\HowToDoTriple\\htd_route_outlets\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
