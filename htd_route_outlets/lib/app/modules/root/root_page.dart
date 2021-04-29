@@ -6,7 +6,7 @@ import 'root_controller.dart';
 
 class RootPage extends StatefulWidget {
   final String title;
-  const RootPage({Key key, this.title = "Root"}) : super(key: key);
+  const RootPage({Key? key, this.title = "Root"}) : super(key: key);
 
   @override
   _RootPageState createState() => _RootPageState();
