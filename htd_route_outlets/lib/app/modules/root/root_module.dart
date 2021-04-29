@@ -6,7 +6,7 @@ import 'root_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'root_page.dart';
 
-class RootModule extends ChildModule {
+class RootModule extends Module {
   @override
   final List<Bind> binds = [
     Bind((i) => RootController()),

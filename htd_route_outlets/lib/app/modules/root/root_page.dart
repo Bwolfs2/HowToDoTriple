@@ -25,8 +25,8 @@ class _RootPageState extends ModularState<RootPage, RootController> {
       bottomNavigationBar: RxBuilder(
         builder: (BuildContext context) {
           return BubbleBottomBar(
-            currentIndex: store.selectedIndex.value,
-            onTap: (index) => store.changePage(index),
+            currentIndex: controller.selectedIndex.value,
+            onTap: (index) => controller.changePage(index),
             fabLocation: BubbleBottomBarFabLocation.end,
             hasNotch: true,
             opacity: .2,

@@ -2,7 +2,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 import 'chat_group_page.dart';
 
-class ChatGroupModule extends ChildModule {
+class ChatGroupModule extends Module {
   @override
   final List<Bind> binds = [];
 

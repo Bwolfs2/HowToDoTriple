@@ -7,13 +7,13 @@ class RootController {
   void changePage(int index) {
     switch (index) {
       case 0:
-        Modular.to.navigate('/chat');
+        Modular.to.navigate('/root/chat');
         break;
       case 1:
-        Modular.to.navigate('/status');
+        Modular.to.navigate('/root/status');
         break;
       case 2:
-        Modular.to.navigate('/call');
+        Modular.to.navigate('/root/call');
         break;
       default:
     }

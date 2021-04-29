@@ -1,7 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'calls_page.dart';
 
-class CallsModule extends ChildModule {
+class CallsModule extends Module {
   @override
   final List<Bind> binds = [];
 
