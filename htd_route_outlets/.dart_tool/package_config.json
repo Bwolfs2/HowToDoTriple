@@ -111,7 +111,7 @@
     },
     {
       "name": "flutter_modular",
-      "rootUri": "file:///C:/Users/Bwolf/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/flutter_modular-3.1.1",
+      "rootUri": "file:///C:/Users/Bwolf/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/flutter_modular-3.1.1+1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -272,7 +272,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-04-29T15:05:36.191663Z",
+  "generated": "2021-04-29T17:34:18.866989Z",
   "generator": "pub",
   "generatorVersion": "2.12.2"
 }

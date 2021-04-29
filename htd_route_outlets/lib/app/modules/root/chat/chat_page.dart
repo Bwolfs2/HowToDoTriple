@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class ChatPage extends StatefulWidget {
   final String title;
@@ -26,7 +27,7 @@ class _ChatPageState extends State<ChatPage> {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(primary: Colors.green.withOpacity(.8)),
                 onPressed: () {
-                  Navigator.of(context).pushNamed('/chatUser');
+                  Modular.to.pushNamed('./chatUser', forRoot: true); // Sai para fora do Outlet
                 },
                 child: Text(
                   "Chat User",
@@ -40,7 +41,7 @@ class _ChatPageState extends State<ChatPage> {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(primary: Colors.blue.withOpacity(.8)),
                 onPressed: () {
-                  Navigator.of(context).pushNamed('/chatGroup');
+                  Modular.to.pushNamed('./chatGroup'); // Fica dentro do Outlet
                 },
                 child: Text(
                   "Chat Group",

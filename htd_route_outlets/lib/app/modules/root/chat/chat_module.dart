@@ -10,7 +10,10 @@ class ChatModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-    ChildRoute(Modular.initialRoute, child: (_, args) => ChatPage()),
+    ChildRoute(
+      Modular.initialRoute,
+      child: (_, args) => ChatPage(),
+    ),
     ModuleRoute("/chatUser", module: ChatUserModule(), transition: TransitionType.fadeIn),
     ModuleRoute("/chatGroup", module: ChatGroupModule(), transition: TransitionType.fadeIn)
   ];
