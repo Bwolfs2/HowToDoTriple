@@ -23,7 +23,12 @@ environment:
 dependencies:
   flutter_triple: ^1.0.5+1
   functional_listener: ^1.1.1
-  flutter_modular: 3.1.1+1
+  flutter_modular: ^3.1.1+1
+     path: D:\packages\modular\flutter_modular
+    # git: 
+    #   url: https://github.com/Flutterando/modular.git
+    #   path: flutter_modular
+    #   ref: 3.2.0-beta.1
    
     
   asuka : 2.0.0-nullsafety.2

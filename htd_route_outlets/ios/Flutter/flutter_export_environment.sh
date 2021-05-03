@@ -1,7 +1,7 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=C:\Users\bwolf\fvm\default"
-export "FLUTTER_APPLICATION_PATH=D:\HowToDoTriple\htd_route_outlets"
+export "FLUTTER_ROOT=D:\fvm\images\default"
+export "FLUTTER_APPLICATION_PATH=D:\how_to_do\HowToDoTriple\htd_route_outlets"
 export "FLUTTER_TARGET=lib\main.dart"
 export "FLUTTER_BUILD_DIR=build"
 export "SYMROOT=${SOURCE_ROOT}/../build\ios"
