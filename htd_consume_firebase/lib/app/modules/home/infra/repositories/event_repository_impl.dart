@@ -25,4 +25,9 @@ class EventRepositoryImpl implements IEventRepository {
   Future<bool> removeEventById(String id) async {
     return await _eventDatasource.removeEventById(id);
   }
+
+  @override
+  Future<Stream<List<EventEntity>>> getEventsRealtime() async {
+    return await _eventDatasource.getEventsRealtime();
+  }
 }

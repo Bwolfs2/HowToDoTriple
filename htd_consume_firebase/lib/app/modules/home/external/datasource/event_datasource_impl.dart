@@ -43,4 +43,10 @@ class EventDatasourceImpl implements IEventDatasource {
       rethrow;
     }
   }
+
+  @override
+  Future<Stream<List<EventEntity>>> getEventsRealtime() async {
+    var result = collection.snapshots();
+    return result.map((events) => events.docs.map((e) => EventMapper.fromMap(e.data() as Map)).toList());
+  }
 }

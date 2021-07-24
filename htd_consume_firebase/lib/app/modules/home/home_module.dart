@@ -1,6 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:htd_consume_firebase/app/modules/home/domain/usecase/get_event_by_id.dart';
 import 'package:htd_consume_firebase/app/modules/home/domain/usecase/get_events.dart';
+import 'package:htd_consume_firebase/app/modules/home/domain/usecase/get_events_realtime.dart';
 import 'package:htd_consume_firebase/app/modules/home/domain/usecase/remove_event_by_id.dart';
 
 import 'domain/usecase/add_event.dart';
@@ -13,14 +14,16 @@ import 'presenter/home_store.dart';
 class HomeModule extends Module {
   @override
   final List<Bind> binds = [
-    Bind.factory((i) => HomeStore(i(), i(), i(), i())),
+    Bind.factory((i) => HomeStore(i(), i(), i(), i(), i())),
 
     //
     Bind.lazySingleton((i) => AddEvent(i())),
     Bind.lazySingleton((i) => UpdateEvent(i())),
     Bind.lazySingleton((i) => GetEventByid(i())),
     Bind.lazySingleton((i) => GetEvents(i())),
+    Bind.lazySingleton((i) => GetEventsRealtime(i())),
     Bind.lazySingleton((i) => RemoveEventById(i())),
+
     //
     Bind.lazySingleton((i) => EventRepositoryImpl(i())),
     Bind.lazySingleton((i) => EventDatasourceImpl()),

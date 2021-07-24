@@ -4,6 +4,6 @@ abstract class IEventDatasource {
   Future<EventEntity> getEventByid(String id);
   Future<bool> addOrUpdateEvent(EventEntity eventEntity);
   Future<List<EventEntity>> getEvents();
-
-  removeEventById(String id) {}
+  Future<bool> removeEventById(String id);
+  Future<Stream<List<EventEntity>>> getEventsRealtime();
 }
