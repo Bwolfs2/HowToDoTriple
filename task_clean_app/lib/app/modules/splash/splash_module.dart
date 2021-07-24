@@ -1,7 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'splash_page.dart';
 
-class SplashModule extends ChildModule {
+class SplashModule extends Module {
   @override
   final List<Bind> binds = [];
 

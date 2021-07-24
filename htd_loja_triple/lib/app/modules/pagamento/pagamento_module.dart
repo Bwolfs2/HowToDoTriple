@@ -11,7 +11,7 @@ import 'pages/pagamento_sucesso/pagamento_sucesso_controller.dart';
 import 'pages/pagamento_sucesso/pagamento_sucesso_page.dart';
 import 'stores/pagamento_store.dart';
 
-class PagamentoModule extends ChildModule {
+class PagamentoModule extends Module {
   @override
   final List<Bind> binds = [
     Bind((i) => PagamentoSucessoController(i.get<PagamentoStore>())),
@@ -24,12 +24,8 @@ class PagamentoModule extends ChildModule {
   @override
   final List<ModularRoute> routes = [
     ChildRoute(Modular.initialRoute, child: (_, args) => PagamentoPage()),
-    ChildRoute("/endereco",
-        child: (_, args) => DadosEnderecoPage(),
-        transition: TransitionType.rightToLeft),
-    ChildRoute("/dadosPagamento",
-        child: (_, args) => DadosPagamentoPage(),
-        transition: TransitionType.rightToLeft),
+    ChildRoute("/endereco", child: (_, args) => DadosEnderecoPage(), transition: TransitionType.rightToLeft),
+    ChildRoute("/dadosPagamento", child: (_, args) => DadosPagamentoPage(), transition: TransitionType.rightToLeft),
     ChildRoute("/sucesso", child: (_, args) => PagamentoSucessoPage()),
   ];
 }

@@ -28,13 +28,13 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  flutter_modular: 3.2.0
+  flutter_modular: ^3.3.1
   ##  git: 
   ##    url: https://github.com/Flutterando/modular.git
   ##    path: flutter_modular
   ##    ref: 3.2.0-beta.1
 
-  flutter_triple: ^1.0.5+1 
+  flutter_triple: ^1.2.3+1
 
 dev_dependencies:
  

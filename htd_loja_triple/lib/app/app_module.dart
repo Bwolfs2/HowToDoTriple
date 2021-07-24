@@ -10,7 +10,7 @@ import 'modules/pagamento/pagamento_module.dart';
 import 'modules/produto/produto_module.dart';
 import 'shared/stores/auth/auth_view_model.dart';
 
-class AppModule extends MainModule {
+class AppModule extends Module {
   @override
   final List<Bind> binds = [
     Bind((i) => AppController()),
@@ -19,16 +19,11 @@ class AppModule extends MainModule {
 
   @override
   final List<ModularRoute> routes = [
-    ModuleRoute(Modular.initialRoute,
-        module: LojaModule(), transition: TransitionType.fadeIn),
-    ModuleRoute("/login",
-        module: AuthModule(), transition: TransitionType.fadeIn),
-    ModuleRoute("/produto",
-        module: ProdutoModule(), transition: TransitionType.rightToLeft),
-    ModuleRoute("/compra",
-        module: CompraModule(), transition: TransitionType.fadeIn),
-    ModuleRoute("/pagamento",
-        module: PagamentoModule(), transition: TransitionType.fadeIn),
+    ModuleRoute(Modular.initialRoute, module: LojaModule(), transition: TransitionType.fadeIn),
+    ModuleRoute("/login", module: AuthModule(), transition: TransitionType.fadeIn),
+    ModuleRoute("/produto", module: ProdutoModule(), transition: TransitionType.rightToLeft),
+    ModuleRoute("/compra", module: CompraModule(), transition: TransitionType.fadeIn),
+    ModuleRoute("/pagamento", module: PagamentoModule(), transition: TransitionType.fadeIn),
   ];
 
   @override

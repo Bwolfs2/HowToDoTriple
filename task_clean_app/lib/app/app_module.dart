@@ -7,7 +7,7 @@ import 'modules/shared/database/database_shared.dart';
 import 'modules/shared/database/local_database.dart';
 import 'modules/splash/splash_module.dart';
 
-class AppModule extends MainModule {
+class AppModule extends Module {
   @override
   final List<Bind> binds = [
     Bind((i) => DatabaseShared()),

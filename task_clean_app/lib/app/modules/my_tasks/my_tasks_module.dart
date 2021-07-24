@@ -11,7 +11,7 @@ import 'ui/list_tasks/list_tasks_controller.dart';
 import 'ui/list_tasks/list_tasks_page.dart';
 import 'ui/update_task/update_task_controller.dart';
 
-class MyTasksModule extends ChildModule {
+class MyTasksModule extends Module {
   @override
   final List<Bind> binds = [
     //Controllers

@@ -21,15 +21,9 @@ environment:
   sdk: ">=2.12.0-0 <3.0.0"
 
 dependencies:
-  flutter_triple: ^1.0.5+1
+  flutter_triple: ^1.2.3+1
   functional_listener: ^1.1.1
-  flutter_modular: ^3.1.1+1
-     path: D:\packages\modular\flutter_modular
-    # git: 
-    #   url: https://github.com/Flutterando/modular.git
-    #   path: flutter_modular
-    #   ref: 3.2.0-beta.1
-   
+  flutter_modular: ^3.3.1   
     
   asuka : 2.0.0-nullsafety.2
   bubble_bottom_bar:

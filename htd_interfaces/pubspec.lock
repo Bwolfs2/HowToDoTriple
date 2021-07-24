@@ -99,13 +99,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.3"
-  dartz:
-    dependency: transitive
-    description:
-      name: dartz
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.10.0-nullsafety.2"
   fake_async:
     dependency: transitive
     description:
@@ -157,7 +150,7 @@ packages:
       name: flutter_triple
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.2.1"
+    version: "1.2.3+1"
   glob:
     dependency: transitive
     description:
@@ -386,7 +379,7 @@ packages:
       name: triple
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.2"
+    version: "1.2.0+1"
   triple_test:
     dependency: "direct dev"
     description:

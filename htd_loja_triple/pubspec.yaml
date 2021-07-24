@@ -22,9 +22,9 @@ environment:
 
 dependencies:
   #google_fonts: ^1.1.1  
-  flutter_triple: ^0.0.25
+  flutter_triple: ^1.2.3+1
  # functional_listener: ^1.1.1
-  flutter_modular: 3.0.0-nullsafety.25
+  flutter_modular: ^3.3.1
   asuka : 2.0.0-nullsafety.1
   flutter:
     sdk: flutter

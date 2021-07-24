@@ -5,7 +5,7 @@ import 'loja_store.dart';
 import 'loja_page.dart';
 import 'repositories/loja_repository.dart';
 
-class LojaModule extends ChildModule {
+class LojaModule extends Module {
   @override
   final List<Bind> binds = [
     Bind((i) => LojaRepository()),
@@ -19,7 +19,6 @@ class LojaModule extends ChildModule {
 
   @override
   final List<ModularRoute> routes = [
-    ChildRoute(Modular.initialRoute,
-        child: (_, args) => LojaPage(), transition: TransitionType.fadeIn),
+    ChildRoute(Modular.initialRoute, child: (_, args) => LojaPage(), transition: TransitionType.fadeIn),
   ];
 }

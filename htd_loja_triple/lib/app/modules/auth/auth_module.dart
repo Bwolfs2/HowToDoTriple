@@ -3,7 +3,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import '../../modules/auth/auth_page.dart';
 import '../../shared/stores/auth/auth_view_model.dart';
 
-class AuthModule extends ChildModule {
+class AuthModule extends Module {
   @override
   final List<Bind> binds = [
     Bind(

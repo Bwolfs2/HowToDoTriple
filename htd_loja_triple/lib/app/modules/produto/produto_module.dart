@@ -5,13 +5,13 @@ import 'produto_store.dart';
 import 'produto_page.dart';
 import 'repositories/produto_repository.dart';
 
-class ProdutoModule extends ChildModule {
+class ProdutoModule extends Module {
   @override
   final List<Bind> binds = [
     Bind((i) => ProdutoRepository()),
     Bind((i) => ProdutoStore(
           i.get<ProdutoRepository>(),
-          i.args?.params?["idLoja"],
+          i.args?.params["idLoja"],
           i.get<AuthViewModel>(),
         )),
   ];
@@ -20,9 +20,9 @@ class ProdutoModule extends ChildModule {
   final List<ModularRoute> routes = [
     ChildRoute("/:nomeLoja/:logo/:idLoja",
         child: (_, args) => ProdutoPage(
-              nomeDaLoja: args?.params?["nomeLoja"],
-              id: args?.params?["idLoja"],
-              logo: args?.params?["logo"],
+              nomeDaLoja: args.params["nomeLoja"],
+              id: args.params["idLoja"],
+              logo: args.params["logo"],
             ),
         transition: TransitionType.fadeIn),
   ];

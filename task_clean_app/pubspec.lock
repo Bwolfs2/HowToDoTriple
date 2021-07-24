@@ -28,7 +28,7 @@ packages:
       name: asuka
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.0-nullsafety.1"
+    version: "2.0.0-nullsafety.2"
   async:
     dependency: transitive
     description:
@@ -196,7 +196,7 @@ packages:
       name: ffi
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.0-nullsafety.1"
+    version: "1.1.2"
   file:
     dependency: transitive
     description:
@@ -217,14 +217,14 @@ packages:
       name: floor
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0-nullsafety.0"
+    version: "1.1.0"
   floor_annotation:
     dependency: transitive
     description:
       name: floor_annotation
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0-nullsafety.0"
+    version: "1.0.0"
   floor_generator:
     dependency: "direct dev"
     description:
@@ -243,7 +243,7 @@ packages:
       name: flutter_modular
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.0-nullsafety.36"
+    version: "3.3.1"
   flutter_modular_annotations:
     dependency: transitive
     description:
@@ -262,7 +262,7 @@ packages:
       name: flutter_triple
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.34"
+    version: "1.2.3+1"
   glob:
     dependency: transitive
     description:
@@ -297,7 +297,7 @@ packages:
       name: intl
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.17.0-nullsafety.2"
+    version: "0.17.0"
   io:
     dependency: transitive
     description:
@@ -416,7 +416,7 @@ packages:
       name: rx_notifier
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0-nullsafety.2"
+    version: "1.1.0"
   shelf:
     dependency: transitive
     description:
@@ -456,28 +456,28 @@ packages:
       name: sqflite
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.0-nullsafety.2"
+    version: "2.0.0+3"
   sqflite_common:
     dependency: transitive
     description:
       name: sqflite_common
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.0-nullsafety.2"
+    version: "2.0.0+2"
   sqflite_common_ffi:
     dependency: transitive
     description:
       name: sqflite_common_ffi
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.0-nullsafety.6"
+    version: "2.0.0+1"
   sqlite3:
     dependency: transitive
     description:
       name: sqlite3
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.1.9-nullsafety.2"
+    version: "1.1.2"
   stack_trace:
     dependency: transitive
     description:
@@ -512,7 +512,7 @@ packages:
       name: synchronized
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.0-nullsafety.1"
+    version: "3.0.0"
   term_glyph:
     dependency: transitive
     description:
@@ -540,7 +540,7 @@ packages:
       name: triple
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.27"
+    version: "1.2.0+1"
   typed_data:
     dependency: transitive
     description:
@@ -577,5 +577,5 @@ packages:
     source: hosted
     version: "2.2.1"
 sdks:
-  dart: ">=2.12.0-29.10.beta <3.0.0"
+  dart: ">=2.12.0 <3.0.0"
   flutter: ">=1.24.0-10"
