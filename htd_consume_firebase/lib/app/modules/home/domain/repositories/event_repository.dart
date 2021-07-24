@@ -5,4 +5,5 @@ abstract class IEventRepository {
   Future<bool> addOrUpdateEvent(EventEntity eventEntity);
   Future<List<EventEntity>> getEvents();
   Future<bool> removeEventById(String id);
+  Future<Stream<List<EventEntity>>> getEventsRealtime();
 }
