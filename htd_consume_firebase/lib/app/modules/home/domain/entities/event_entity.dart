@@ -1,8 +1,9 @@
 import 'package:uuid/uuid.dart';
 
+import 'entity.dart';
+
 //Normally i dont use Entity on my entities but how "Event" is a common word i will use it to avoid some errors
-class EventEntity {
-  final String id;
+class EventEntity extends Entity {
   final String name;
   final double points;
   final DateTime dateEvent;
@@ -14,7 +15,7 @@ class EventEntity {
     required this.points,
     required this.dateEvent,
     this.completed = false,
-  }) : id = id ?? Uuid().v4();
+  }) : super(id ?? Uuid().v4());
 
   EventEntity copyWith({
     String? id,
