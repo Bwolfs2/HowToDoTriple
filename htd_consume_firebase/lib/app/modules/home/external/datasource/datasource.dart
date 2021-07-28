@@ -19,9 +19,7 @@ abstract class Datasource<T extends Entity> extends Mapper<T> {
 
   Future<List<T>> getAll() async {
     var result = await collection.get();
-    return result.docs.map((e) {
-      return fromMap(e.data() as Map);
-    }).toList();
+    return result.docs.map((e) => fromMap(e.data() as Map)).toList();
   }
 
   Future<bool> removeById(String id) async {

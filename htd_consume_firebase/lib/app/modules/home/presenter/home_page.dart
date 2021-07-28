@@ -47,7 +47,8 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
                     selected: events[index].completed,
                     selectedTileColor: Colors.green[700]?.withOpacity(.6),
                     title: Text(events[index].name),
-                    subtitle: Text("${events[index].dateEvent.day}-${events[index].dateEvent.month}-${events[index].dateEvent.year}"),
+                    subtitle: Text(
+                        "${events[index].addresses.length} ${events[index].dateEvent.day}-${events[index].dateEvent.month}-${events[index].dateEvent.year}"),
                     trailing: IconButton(
                       icon: Icon(
                         Icons.delete,

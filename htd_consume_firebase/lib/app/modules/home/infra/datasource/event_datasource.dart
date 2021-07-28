@@ -6,4 +6,5 @@ abstract class IEventDatasource {
   Future<List<EventEntity>> getAll();
   Future<bool> removeById(String id);
   Future<Stream<List<EventEntity>>> getStream();
+  Future<String> getLastName();
 }

@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:uuid/uuid.dart';
 
 import 'entity.dart';
@@ -9,13 +11,11 @@ class EventEntity extends Entity {
   final DateTime dateEvent;
   final bool completed;
 
-  EventEntity({
-    String? id,
-    required this.name,
-    required this.points,
-    required this.dateEvent,
-    this.completed = false,
-  }) : super(id ?? Uuid().v4());
+  final List<AddressEntity> addresses;
+
+  EventEntity(
+      {String? id, required this.name, required this.points, required this.dateEvent, this.completed = false, required this.addresses})
+      : super(id ?? Uuid().v4());
 
   EventEntity copyWith({
     String? id,
@@ -23,13 +23,21 @@ class EventEntity extends Entity {
     double? points,
     DateTime? dateEvent,
     bool? completed,
+    List<AddressEntity>? address,
   }) {
     return EventEntity(
-      id: id ?? this.id,
-      name: name ?? this.name,
-      points: points ?? this.points,
-      dateEvent: dateEvent ?? this.dateEvent,
-      completed: completed ?? this.completed,
-    );
+        id: id ?? this.id,
+        name: name ?? this.name,
+        points: points ?? this.points,
+        dateEvent: dateEvent ?? this.dateEvent,
+        completed: completed ?? this.completed,
+        addresses: address ?? []);
   }
+}
+
+class AddressEntity extends Entity {
+  final String name;
+  final int number;
+  final String complement;
+  AddressEntity(String id, this.name, this.number, this.complement) : super(id);
 }
