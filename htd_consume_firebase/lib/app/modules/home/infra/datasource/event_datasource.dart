@@ -1,9 +1,10 @@
 import 'package:htd_consume_firebase/app/modules/home/domain/entities/event_entity.dart';
 
 abstract class IEventDatasource {
-  Future<EventEntity> getEventByid(String id);
-  Future<bool> addOrUpdateEvent(EventEntity eventEntity);
-  Future<List<EventEntity>> getEvents();
-  Future<bool> removeEventById(String id);
-  Future<Stream<List<EventEntity>>> getEventsRealtime();
+  Future<EventEntity> getByid(String id);
+  Future<bool> addOrUpdate(EventEntity eventEntity);
+  Future<List<EventEntity>> getAll();
+  Future<bool> removeById(String id);
+  Future<Stream<List<EventEntity>>> getStream();
+  Future<String> getLastName();
 }

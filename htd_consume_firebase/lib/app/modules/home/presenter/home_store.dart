@@ -5,6 +5,7 @@ import 'package:htd_consume_firebase/app/modules/home/domain/usecase/get_events.
 import 'package:htd_consume_firebase/app/modules/home/domain/usecase/get_events_realtime.dart';
 import 'package:htd_consume_firebase/app/modules/home/domain/usecase/remove_event_by_id.dart';
 import 'package:htd_consume_firebase/app/modules/home/domain/usecase/update_event.dart';
+import 'package:uuid/uuid.dart';
 
 class HomeStore extends NotifierStore<Exception, List<EventEntity>> {
   final AddEvent _addEvent;
@@ -20,11 +21,17 @@ class HomeStore extends NotifierStore<Exception, List<EventEntity>> {
   void reloadData() async => executeStream(await _getEventsRealtime());
 
   void addEvent() async {
-    await _addEvent.call(EventEntity(
-      name: 'name',
-      points: 20,
-      dateEvent: DateTime.now(),
-    ));
+    await _addEvent.call(
+      EventEntity(
+        name: 'name',
+        points: 20,
+        dateEvent: DateTime.now(),
+        addresses: List.generate(
+          5,
+          (index) => AddressEntity(Uuid().v4(), 'Name', 233, 'Casa'),
+        ),
+      ),
+    );
     // reloadData();
   }
 
