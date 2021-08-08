@@ -1,4 +1,5 @@
 import 'package:floor/floor.dart';
+
 import 'package:task_clean_app/app/modules/my_tasks/domain/entities/task.dart';
 
 @Entity(tableName: 'TaskEntidade')
@@ -26,6 +27,20 @@ class TaskEntidade {
       initTime: DateTime.fromMillisecondsSinceEpoch(initTime),
       endTime: DateTime.fromMillisecondsSinceEpoch(endTime),
       description: description,
+    );
+  }
+
+  TaskEntidade copyWith({
+    int? id,
+    int? initTime,
+    int? endTime,
+    String? description,
+  }) {
+    return TaskEntidade(
+      id ?? this.id,
+      initTime ?? this.initTime,
+      endTime ?? this.endTime,
+      description ?? this.description,
     );
   }
 }

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_triple/flutter_triple.dart';
-import 'package:task_clean_app/app/modules/my_tasks/domain/entities/task.dart';
 import 'package:task_clean_app/app/modules/my_tasks/domain/errors/erros.dart';
 import 'package:task_clean_app/app/modules/my_tasks/ui/add_task/add_task_page.dart';
 import 'package:task_clean_app/app/modules/my_tasks/ui/update_task/update_task_page.dart';
+
 import 'list_tasks_controller.dart';
 
 class ListTasksPage extends StatefulWidget {
@@ -13,8 +12,14 @@ class ListTasksPage extends StatefulWidget {
   _ListTasksPageState createState() => _ListTasksPageState();
 }
 
-class _ListTasksPageState
-    extends ModularState<ListTasksPage, ListTasksController> {
+class _ListTasksPageState extends State<ListTasksPage> {
+  var controller = Modular.get<ListTasksController>();
+  @override
+  void initState() {
+    super.initState();
+    controller.getAllTasks();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,12 +58,11 @@ class _ListTasksPageState
                 itemCount: state.tasks.length,
                 itemBuilder: (_, index) {
                   var task = state.tasks[index];
+                  // print(index);
                   return Card(
                     elevation: 0,
                     margin: EdgeInsets.all(5),
-                    color: task.isFinished
-                        ? Colors.blue[300]?.withOpacity(.5)
-                        : Colors.green[300]?.withOpacity(.5),
+                    color: task.isFinished ? Colors.blue[300]?.withOpacity(.5) : Colors.green[300]?.withOpacity(.5),
                     child: ListTile(
                       title: Text(
                         task.description,
@@ -83,9 +87,7 @@ class _ListTasksPageState
                           ),
                           onPressed: () async {
                             await controller.remove(task);
-                            Scaffold.of(context).showSnackBar(SnackBar(
-                                content:
-                                    Text("${task.description} dismissed")));
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("${task.description} dismissed")));
                           }),
                     ),
                   );

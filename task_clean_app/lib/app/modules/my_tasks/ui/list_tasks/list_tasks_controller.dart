@@ -11,19 +11,21 @@ class ListTasksController extends NotifierStore<IFailure, TaskState> {
   final IRetrieveAllTask _retrieveAllTasks;
   final IRemoveTask _removeTask;
 
-  ListTasksController(this._retrieveAllTasks, this._removeTask)
-      : super(EmptyTaskState()) {
-    getAllTasks();
-  }
+  ListTasksController(this._retrieveAllTasks, this._removeTask) : super(EmptyTaskState());
 
   Future<void> getAllTasks() async {
+    print('Init: ${DateTime.now()}');
     setLoading(true);
 
     var result = await _retrieveAllTasks();
 
-    result.fold(setError, (list) => update(TaskState(list)));
+    result.fold(setError, (list) {
+      update(TaskState(list));
+      print('Size: ${list.length}');
+    });
 
     setLoading(false);
+    print('End: ${DateTime.now()}');
   }
 
   Future<void> remove(Task task) async {

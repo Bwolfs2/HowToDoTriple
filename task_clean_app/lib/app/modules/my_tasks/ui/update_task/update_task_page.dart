@@ -12,8 +12,7 @@ class UpdateTaskPage extends StatefulWidget {
   _UpdateTaskPageState createState() => _UpdateTaskPageState();
 }
 
-class _UpdateTaskPageState
-    extends ModularState<UpdateTaskPage, UpdateTaskController> {
+class _UpdateTaskPageState extends ModularState<UpdateTaskPage, UpdateTaskController> {
   @override
   void initState() {
     super.initState();
@@ -54,8 +53,10 @@ class _UpdateTaskPageState
           Container(
             width: double.infinity,
             margin: const EdgeInsets.symmetric(horizontal: 15),
-            child: RaisedButton(
-              color: Theme.of(context).primaryColor,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Theme.of(context).primaryColor,
+              ),
               onPressed: () async {
                 var result = await controller.updatetask();
 

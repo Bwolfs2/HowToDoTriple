@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:task_clean_app/app/app_widget.dart';
 
 import 'modules/my_tasks/my_tasks_module.dart';
 import 'modules/shared/database/database_shared.dart';
@@ -19,7 +17,4 @@ class AppModule extends Module {
     ModuleRoute(Modular.initialRoute, module: SplashModule()),
     ModuleRoute("/myTasks", module: MyTasksModule()),
   ];
-
-  @override
-  Widget get bootstrap => AppWidget();
 }
