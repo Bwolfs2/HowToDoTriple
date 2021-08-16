@@ -1,4 +1,4 @@
-import 'package:htd_routeoutlet_lateral/app/modules/products/products_Page.dart';
+import 'package:htd_routeoutlet_lateral/app/modules/products/products_page.dart';
 import 'package:htd_routeoutlet_lateral/app/modules/products/products_store.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
