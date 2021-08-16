@@ -1,6 +1,6 @@
 import 'package:htd_routeoutlet_lateral/app/modules/home/home_module.dart';
 import 'package:htd_routeoutlet_lateral/app/modules/products/products_module.dart';
-import 'package:htd_routeoutlet_lateral/app/modules/root/root_Page.dart';
+import 'package:htd_routeoutlet_lateral/app/modules/root/root_page.dart';
 import 'package:htd_routeoutlet_lateral/app/modules/root/root_store.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 

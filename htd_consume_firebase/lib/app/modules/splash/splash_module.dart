@@ -1,4 +1,4 @@
-import 'package:htd_consume_firebase/app/modules/splash/splash_Page.dart';
+import 'package:htd_consume_firebase/app/modules/splash/splash_page.dart';
 import 'package:htd_consume_firebase/app/modules/splash/splash_store.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
