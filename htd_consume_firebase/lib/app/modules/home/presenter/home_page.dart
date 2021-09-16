@@ -4,15 +4,12 @@ import 'package:flutter_triple/flutter_triple.dart';
 import 'package:htd_consume_firebase/app/modules/home/domain/entities/event_entity.dart';
 import 'home_store.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   final String title;
-  const HomePage({Key? key, this.title = "Home"}) : super(key: key);
+  HomePage({Key? key, this.title = "Home"}) : super(key: key);
 
-  @override
-  _HomePageState createState() => _HomePageState();
-}
+  final store = Modular.get<HomeStore>();
 
-class _HomePageState extends ModularState<HomePage, HomeStore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,3 +80,5 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
     );
   }
 }
+
+abstract class TesteMix {}

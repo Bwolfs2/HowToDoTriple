@@ -42,8 +42,10 @@ class _AddTaskPageState extends ModularState<AddTaskPage, AddTaskController> {
           Container(
             width: double.infinity,
             margin: const EdgeInsets.symmetric(horizontal: 15),
-            child: RaisedButton(
-              color: Theme.of(context).primaryColor,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Theme.of(context).primaryColor,
+              ),
               onPressed: () async {
                 var result = await controller.addNewtask();
 

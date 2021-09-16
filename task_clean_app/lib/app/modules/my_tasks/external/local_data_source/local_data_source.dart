@@ -11,7 +11,7 @@ class LocalDataSource extends ITaskDataSource {
   @override
   Future<void> addNewTask(Task task) async {
     var tas = TaskEntidade.fromDomain(task);
-    return await appDatabase.taskDao.addNewTask(tas);
+    await appDatabase.taskDao.addNewTask(tas);
   }
 
   @override

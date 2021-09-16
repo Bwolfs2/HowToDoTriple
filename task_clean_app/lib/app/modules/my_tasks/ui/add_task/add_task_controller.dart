@@ -1,11 +1,8 @@
+import 'package:asuka/asuka.dart' as asuka;
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_triple/flutter_triple.dart';
-
 import 'package:task_clean_app/app/modules/my_tasks/domain/entities/task.dart';
 import 'package:task_clean_app/app/modules/my_tasks/domain/use_cases/add_new_task.dart';
-
-import 'package:asuka/asuka.dart' as asuka;
 
 class AddTaskController {
   final IAddNewTask _addNewTask;
@@ -25,7 +22,7 @@ class AddTaskController {
   setDescription(String _description) => description.value = _description;
 
   Future<bool> addNewtask() async {
-    try {
+    try {      
       var result = await _addNewTask(
         Task(
           description: description.value,
