@@ -4,7 +4,7 @@ import 'package:htd_consume_firebase/app/modules/home/external/mappers/event_map
 import 'package:htd_consume_firebase/app/modules/home/infra/datasource/event_datasource.dart';
 
 class EventDatasourceImpl extends Datasource<EventEntity> with EventMapper implements IEventDatasource {
-  EventDatasourceImpl() : super('events_entity');
+  EventDatasourceImpl() : super('events_entity_new');
 
   @override
   Future<String> getLastName() {
