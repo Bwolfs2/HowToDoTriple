@@ -1,7 +1,8 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=D:\fvm\images\versions\2.0.6"
+export "FLUTTER_ROOT=D:\fvm\images\versions\2.2.0"
 export "FLUTTER_APPLICATION_PATH=D:\how_to_do\HowToDoTriple\htd_route_outlets"
+export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_TARGET=lib\main.dart"
 export "FLUTTER_BUILD_DIR=build"
 export "SYMROOT=${SOURCE_ROOT}/../build\ios"

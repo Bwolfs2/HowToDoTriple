@@ -9,7 +9,7 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/root/chat',
+      initialRoute: '/root/chat/',
     ).modular();
   }
 }
