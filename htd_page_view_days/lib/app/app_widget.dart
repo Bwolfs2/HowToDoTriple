@@ -6,11 +6,7 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Slidy',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      initialRoute: '/root/chat/',
+      theme: ThemeData(primarySwatch: Colors.blue),
     ).modular();
   }
 }
